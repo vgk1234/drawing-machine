@@ -11,7 +11,7 @@ function draw() {
          width - pmouseX, height - pmouseY);
     line(mouseX, mouseY, pmouseX, pmouseY);
     line(mouseX, height - mouseY, 
-         pmouseX, height - pmouseY);
+        pmouseX, height - pmouseY);
     line(width - mouseX, mouseY, 
          width - pmouseX, pmouseY);
   }
@@ -22,6 +22,12 @@ function keyTyped () {
     //save this image
     saveCanvas('filename', 'png')
   }
+
+  beginShape(); 
+  for (let i = 0; i < array.length - 1; i++) {
+    curveVertex(array[i][0], array[i][1])
+  }
+  endShape();
   
   return false;
 }
