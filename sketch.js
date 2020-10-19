@@ -1,12 +1,18 @@
+let backgroundColor = 200;
+
 function setup() {
-  createCanvas(400, 400);
-  background(255, 255, 204);
+  createCanvas(windowWidth, windowHeight);
+  background(backgroundColor);
+
+  stroke(255, 204, 0);
   strokeWeight(5);
 }
 
 function draw() {
-  if (mouseIsPressed == true) {
-    stroke(map(mouseX, 0, 600, 0, 255, true))
+  if (mouseIsPressed) {
+    background (backgroundColor);
+    backgroundColor-= 0.5;
+    // stroke(map(mouseX, 0, 600, 0, 255, true))
     line(width - mouseX, height - mouseY, 
          width - pmouseX, height - pmouseY);
     line(mouseX, mouseY, pmouseX, pmouseY);
