@@ -1,18 +1,27 @@
-let backgroundColor = 200;
+// let backgroundColor = 255;
+
+let noiseOffset = 0.0;
+let strokeWidth = 5;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(backgroundColor);
+  background(255, 255, 204); //(backgroundColor)
 
   stroke(255, 204, 0);
-  strokeWeight(5);
+  strokeWeight(strokeWeight);
 }
 
 function draw() {
   if (mouseIsPressed) {
-    background (backgroundColor);
-    backgroundColor-= 0.5;
-    // stroke(map(mouseX, 0, 600, 0, 255, true))
+    background (220, 150, 0, 5); 
+    // backgroundColor-= 0.5;
+    strokeWeight(strokeWidth);
+
+    noiseOffset += 0.08;
+    strokeWidth = noise(noiseOffset) * 80;
+
+
+    stroke(map(mouseX, 0, 600, 0, 255, true))
     line(width - mouseX, height - mouseY, 
          width - pmouseX, height - pmouseY);
     line(mouseX, mouseY, pmouseX, pmouseY);
@@ -25,8 +34,10 @@ function draw() {
 
 function keyTyped () {
   if (key === 's') {
-    //save this image
-    saveCanvas('filename', 'png')
+    saveCanvas('filename', 'png');
+  }
+  else if (key === 'c') {
+    clear();
   }
 
   // beginShape(); 
