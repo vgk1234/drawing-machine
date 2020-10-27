@@ -16,7 +16,7 @@ function draw() {
     // backgroundColor-= 0.5;
     // backgroundColor = 255;
     // stroke(250, 210, 50, 10);
-    stroke(map(mouseX, 0, 600, 0, 200, true));
+    stroke(map(mouseX, 0, 600, 0, 255, true));
     strokeWeight(strokeWidth);
 
     noiseOffset += 0.08;
