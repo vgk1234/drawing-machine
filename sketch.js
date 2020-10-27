@@ -51,9 +51,11 @@ function keyTyped () {
   return false;
 }
 
-// function drawGrid() {
-//   numCells = 20;
-//   for (let i = 0; i <= width;  i += width / numCells); {
-//     rect(i, 50, width / numCells, height / numCells);
-//   }
-// }
+function drawGrid() {
+  numCells = 20;
+  for (let i = 0; i <= width;  i += width / numCells); {
+    for (let j = 0; j <= height; j += height /numCells); {
+      rect (i, j, width / numCells, height / numCells);
+    }
+  }
+}
