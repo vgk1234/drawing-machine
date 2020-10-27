@@ -12,36 +12,33 @@ function setup() {
   strokeWeight(strokeWeight);
 }
 
-function mousePressed () {
-  array = [];
+function draw() {
+  if (mouseIsPressed) {
+    background (220, 150, 0, 1); 
+    // backgroundColor-= 0.5;
+    stroke(5);
+    strokeWeight(strokeWidth);
+
+    // noiseOffset += 0.08;
+    // strokeWidth = noise(noiseOffset) * 80;
+
+  
+    // stroke(map(mouseX, 0, 600, 0, 255, true))
+    line(width - mouseX, height - mouseY, 
+         width - pmouseX, height - pmouseY);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+    line(mouseX, height - mouseY, 
+        pmouseX, height - pmouseY);
+    line(width - mouseX, mouseY, 
+         width - pmouseX, pmouseY);
+  }
 }
-
-// function draw() {
-//   if (mouseIsPressed) {
-//     //background (220, 150, 0, 5); 
-//     // backgroundColor-= 0.5;
-//     strokeWeight(strokeWidth);
-
-//     noiseOffset += 0.08;
-//     strokeWidth = noise(noiseOffset) * 80;
-
-
-//     stroke(map(mouseX, 0, 600, 0, 255, true))
-//     line(width - mouseX, height - mouseY, 
-//          width - pmouseX, height - pmouseY);
-//     line(mouseX, mouseY, pmouseX, pmouseY);
-//     line(mouseX, height - mouseY, 
-//         pmouseX, height - pmouseY);
-//     line(width - mouseX, mouseY, 
-//          width - pmouseX, pmouseY);
-//   }
-// }
 
 
 function drawGrid() {
   numCells = 20;
-  for (let i = 0; i <= width;  i += width / numCells); {
-    for (let j = 0; j <= height; j += height /numCells); {
+  for (let i = 0; i <= width;  i += width / numCells) {
+    for (let j = 0; j <= height; j += height /numCells) {
       rect (i, j, width / numCells, height / numCells);
     }
   }
@@ -52,7 +49,8 @@ function keyTyped () {
     saveCanvas('filename', 'png');
   }
   else if (key === 'c') {
-    clear();
+    clear(); 
+    setup();
   }
 
   // beginShape(); 
