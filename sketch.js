@@ -19,8 +19,8 @@ function draw() {
     stroke(map(mouseX, 0, 600, 0, 200, true));
     strokeWeight(strokeWidth);
 
-    // noiseOffset += 0.08;
-    // strokeWidth = noise(noiseOffset) * 80;
+    noiseOffset += 0.08;
+    strokeWidth = noise(noiseOffset) * 80;
 
   
     // stroke(map(mouseX, 0, 600, 0, 255, true));
