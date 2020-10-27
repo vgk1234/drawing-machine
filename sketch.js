@@ -6,7 +6,7 @@ let strokeWidth = 5;
 function setup() {
   //drawGrid();
   createCanvas(600, 600); //(windowWidth, windowHeight)
-  background(255, 255, 204); //(backgroundColor)
+  //background(255, 255, 204); //(backgroundColor)
 
   stroke(255, 204, 0);
   strokeWeight(strokeWeight);
@@ -16,7 +16,7 @@ function setup() {
 
 function draw() {
   if (mouseIsPressed) {
-    background (220, 150, 0, 5); 
+    //background (220, 150, 0, 5); 
     // backgroundColor-= 0.5;
     strokeWeight(strokeWidth);
 
