@@ -4,11 +4,13 @@ let noiseOffset = 0.0;
 let strokeWidth = 5;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  drawGrid();
+  createCanvas(600, 600); //(windowWidth, windowHeight)
   background(255, 255, 204); //(backgroundColor)
 
   stroke(255, 204, 0);
   strokeWeight(strokeWeight);
+
 }
 
 function draw() {
@@ -48,3 +50,10 @@ function keyTyped () {
   
   return false;
 }
+
+// function drawGrid() {
+//   numCells = 20;
+//   for (let i = 0; i <= width;  i += width / numCells); {
+//     rect(i, 50, width / numCells, height / numCells);
+//   }
+// }
