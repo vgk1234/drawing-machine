@@ -8,22 +8,22 @@ function setup() {
   drawGrid();
   //background(255, 255, 204); //(backgroundColor)
 
-  stroke(255, 204, 0);
-  strokeWeight(strokeWeight);
 }
 
 function draw() {
   if (mouseIsPressed) {
     background (220, 150, 0, 1); 
     // backgroundColor-= 0.5;
-    stroke(5);
+    // backgroundColor = 255;
+    // stroke(250, 210, 50, 10);
+    stroke(map(mouseX, 0, 600, 0, 200, true));
     strokeWeight(strokeWidth);
 
     // noiseOffset += 0.08;
     // strokeWidth = noise(noiseOffset) * 80;
 
   
-    // stroke(map(mouseX, 0, 600, 0, 255, true))
+    // stroke(map(mouseX, 0, 600, 0, 255, true));
     line(width - mouseX, height - mouseY, 
          width - pmouseX, height - pmouseY);
     line(mouseX, mouseY, pmouseX, pmouseY);
@@ -37,8 +37,9 @@ function draw() {
 
 function drawGrid() {
   numCells = 20;
+  fillColor = 255;
   for (let i = 0; i <= width;  i += width / numCells) {
-    for (let j = 0; j <= height; j += height /numCells) {
+    for (let j = 0; j <= height; j += height /numCells) {     
       rect (i, j, width / numCells, height / numCells);
     }
   }
