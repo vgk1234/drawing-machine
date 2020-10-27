@@ -4,13 +4,14 @@ let noiseOffset = 0.0;
 let strokeWidth = 5;
 
 function setup() {
-  drawGrid();
+  //drawGrid();
   createCanvas(600, 600); //(windowWidth, windowHeight)
   background(255, 255, 204); //(backgroundColor)
 
   stroke(255, 204, 0);
   strokeWeight(strokeWeight);
 
+  drawGrid();
 }
 
 function draw() {
