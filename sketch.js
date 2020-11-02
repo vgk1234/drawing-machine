@@ -134,8 +134,8 @@ function keyTyped () {
   }
   else if (key === 'c') {
     clear(); 
-    createCanvas(600, 600);
-    background(220);
+    createCanvas(800, 600);
+    background(255, 153, 51);
     drawGhostOutline(); 
     drawOutlineText();
   }
