@@ -4,7 +4,7 @@
 // let strokeWidth = 5;
 
 function setup() {
-  createCanvas(800, 600); //(windowWidth, windowHeight)
+  createCanvas(windowWidth, windowHeight); //(windowWidth, windowHeight)
   background(255, 153, 51); //(backgroundColor)
  
   
@@ -134,7 +134,7 @@ function keyTyped () {
   }
   else if (key === 'c') {
     clear(); 
-    createCanvas(800, 600);
+    createCanvas(windowWidth, windowHeight);;
     background(255, 153, 51);
     drawGhostOutline(); 
     drawOutlineText();
