@@ -12,7 +12,7 @@ function setup() {
   colorPicker.style('width', '100px');
   
   
-  slider = createSlider(0, 50, 10);
+  slider = createSlider(0, 80, 10);
   slider.style('height', '100px');
   
   drawGhostOutline(); 
@@ -102,7 +102,6 @@ function draw() {
     // strokeWidth = noise(noiseOffset) * 80;
 
   
-    // stroke(map(mouseX, 0, 600, 0, 255, true));
     line(mouseX, mouseY, pmouseX, pmouseY);
     // line(width - mouseX, height - mouseY, 
     //      width - pmouseX, height - pmouseY);
