@@ -12,7 +12,7 @@ p {
 canvas {
   display: block;
   margin: auto;
-  border: 5px solid black;
+  border: 1px solid black;
   /* top: 0;
   left: 0; */
   /* position: absolute; */
